@@ -26,8 +26,34 @@ Output/s:
 	**the denominator the length of the control string
 
 Steps:
-1) 
-2)
+- Know the controlled string in which will be the standard.
+- Create the scenarios in which the strings will be considered to have an instance of error:
+	- 1st: if the inputted string contains a letter not from the range a to m.
+	- 2nd: if the inputted string does not have the same pattern as the controlled string.
+	- 3rd: If both of the above two errors are met.
+- Know how to check the scenarios above.
+
+Techniques/Methods/Procedures Done:
+- 
+
+Minimum Requirements:
+- Pattern of correct printer error is 34111 34111 34111...
+- Not necessarily case sensitive
+- Letters must be ranging from a-m
+
+What do you need:
+
+- You need something to stand as a role model of all the given strings
+	* a regular expression to set the range of letters in a string, in this case a-m
+		! must return an error count once it finds a letter outside the range of a - m
+
+- You need something to check if there is an error in the given string 
+- You need something to count the length of the given string.
+- You need something to count the errors found in a given string.
+- You need something to make a rational number
+- You need something to convert a rational number to a string.
+- You need to know what to do in case where there are no errors
+	* You need an if else statement
 
 -----------------------------------------------------------
 
