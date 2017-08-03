@@ -4,24 +4,20 @@ function printerError(s) {
 //set a model
     range = s.match(/[n-z\d\s\W]/ig);
     sLength = s.length;//denominator
-
-//create a fraction
-		
-
-//Decision
+//decision
 	if (range === null){
-		range = 0;
-		console.log(range + "/" + sLength);
-	} else if (range != null && error > 0 ){
+		console.log(0 + "/" + sLength);
+	} else {
 		error = range.length;//numerator
 		frac = error + "/" + sLength;
 		console.log(frac);
 	}
-	//console.log(range);
 }
-
 printerError('aaabbbbhaijjjm');
 printerError('aaaxbbbbyyhwawiwjjjwwm');
+printerError('aaaxbbbbyyhwawrstuviwjjjwwm');
+printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+
 
 
 
