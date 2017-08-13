@@ -1,0 +1,38 @@
+This time no story, no theory. The examples below show you how to write function accum.
+
+Note: 
+
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+Required:
+- A string that should only contain letters, upper case or lower case
+- There is a specific space or section for each string
+- First letter in the string:
+	> always capitalised
+	> Does not cascade (like the succeeding letters below) since it corresponds to 1, which means there is only one letter for that section
+- Succeeding letters in the string:
+	> Number of characters in each of the string section will cascade corresponding to the what number is the string at.
+	> 1st letters of that section is always capitalised
+	> Corresponding characters will be in lower case
+
+What you need:
+- Regexp to get the letters only, excluding special characters digits and spaces
+- A string separator which will separate each letter of a string by a dash (-)
+- Something which will put all those separated letters in lower case
+- Something which will access the index of each letter of each of the array
+- Something which will be the container of the separated elements
+- Something which will access the elements and push them to an array of their own
+- Something which will divide the strings into different arrays so that we coul
+- Something which will duplicate the letter of the string in each section to the number of the position where letter is at
+
+- Something which will capitalise the 1st letter of each of the separated string
+
+Steps:
+1) 
+2) 
+
+
+
+
+
+
