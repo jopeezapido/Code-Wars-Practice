@@ -1,49 +1,57 @@
 function accum(s){
 
-	//Get letters only, regardless of what is inputted
-	var replacy = s.replace(/[^a-z]/ig,'');
-	//console.log(replacy);
+	//Get letters only, regardless of what is called
+
+		var replacy = s.replace(/[^a-z]/ig,'');
+		//console.log(replacy);
 
 	//Separate each letter and return an array
-	var splitty = replacy.split('');
-	//console.log(splitty);
 
-	//Change all the letters to lower case
-	var low = splitty.map(function (elem){
-		return elem.toLowerCase();
-	})
-	//console.log(low);
+		var splitty = replacy.split('');
+		//console.log(splitty);
+
+	//Get small letters only to lower case regardless of what is called
+
+		var low = splitty.map(function (elem){
+			return elem.toLowerCase();
+		})
+		//console.log(low);
 
 	//access each letter of the array and find each of their positions
 
-	/*for (i= 0; i <= low.length; i++){
-		var pos = low.indexOf(low[i]);
-		console.log(pos + ' is the position of ' + low[i] + ' in the array.');
-	}*/
+		var newArray = [];
 
-	var newArray = [];
+		var pos = low.map(function (elem){
 
-	var pos = low.map(function (elem){
-		var x = low.indexOf(elem) /*+ ' is the position of ' + elem + ' in the array.'*/
-		//console.log(x);
-		for (i=0; i < x ; i++){
-			elem += elem[i];	
-		}
-		var pushy = newArray.push(elem);
-		//console.log(newArray)
-	});
+			var ind = low.indexOf(elem);
+			//console.log(x);
 
-	//Something which will duplicate the letter of the string in each section to the number of the position where letter is at
+			for (i=0; i < ind ; i++){
+				elem += elem[i];
+			}
 
-	/*var dup = low.map(function (elem){
-		var newArray = [];//Somthing which will be the container of the separated elements
-		var pushy = newArray.push(elem);
-		};
+			//var char = elem.toUpperCase();
+			//console.log(char);
+			
+			var pushy = newArray.push(elem);
+			console.log(newArray);
 
-	for (i = 0; i < pos + 1; i++ ){
-		return low[i]+=low[i];
-		console.log(pos);
-	}*/
+			return newArray;
+
+		});
+
+		/*var upper = newArray.map(function (elem){
+			var char = elem.charAt(0);
+			//var cap = elem.toUpperCase();
+			console.log(char);
+		})*/
+
+		var joiny = newArray.join('-');
+		//console.log(joiny)
+
+	//Something which will transform each first letter to upper case
+
+
 }
 
 accum("abcd");    // "A-Bb-Ccc-Dddd"
