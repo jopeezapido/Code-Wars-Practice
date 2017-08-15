@@ -24,36 +24,37 @@ function accum(s){
 		var pos = low.map(function (elem){
 
 			var ind = low.indexOf(elem);
-			//console.log(x);
+			//console.log(ind);
 
 			for (i=0; i < ind ; i++){
 				elem += elem[i];
 			}
-
-			//var char = elem.toUpperCase();
-			//console.log(char);
 			
 			var pushy = newArray.push(elem);
-			console.log(newArray);
+			//console.log(newArray);
 
-			return newArray;
 
 		});
-
-		/*var upper = newArray.map(function (elem){
-			var char = elem.charAt(0);
-			//var cap = elem.toUpperCase();
-			console.log(char);
-		})*/
-
+	
 		var joiny = newArray.join('-');
-		//console.log(joiny)
+
+		function capitalizeFirstLetter(){
+			var cappy = joiny[0].toUpperCase() + joiny.slice(1);
+			console.log(cappy)
+
+			var x = function (elem){
+				elem += 
+			}
+			
+		}
+
+		capitalizeFirstLetter(joiny)
+
 
 	//Something which will transform each first letter to upper case
 
-
 }
 
-accum("abcd");    // "A-Bb-Ccc-Dddd"
-//accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+//accum("abcd");    // "A-Bb-Ccc-Dddd"
+accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 //accum("cwAt");    // "C-Ww-Aaa-Tttt"

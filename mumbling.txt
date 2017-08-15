@@ -21,7 +21,6 @@ What you need:
 - Something which will put all those separated letters in lower case
 - Something which will access the index of each letter of each of the array
 - Something which will be the container of the separated elements
-- Something which will access the elements and push them to an array of their own
 - Something which will divide the strings into different arrays so that we coul
 - Something which will duplicate the letter of the string in each section to the number of the position where letter is at
 
