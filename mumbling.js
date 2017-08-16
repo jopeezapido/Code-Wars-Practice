@@ -17,28 +17,36 @@ function accum(s){
 		})
 		//console.log(low);
 
-	//access each letter of the array and find each of their positions
-
-		var newArray = [];
+		var newArray = [];//new array to put modified elements int
 
 		var pos = low.map(function (elem){
+
+	//access each letter of the array and find each of their positions
 
 			var ind = low.indexOf(elem);
 			//console.log(ind);
 
+	//loop through each element using the index as the boundary of the loop. Concatenate string
+
 			for (i=0; i < ind ; i++){
 				elem += elem[i];
+
 			}
+
+	//push each modified element into the new array set above to create an array of values
 			
 			var pushy = newArray.push(elem);
-			//console.log(newArray);
+			console.log(newArray);
 
+	//access each letter of the first word
 
 		});
+
+	//unite the elements of the array into one string, separated by a dash (-)
 	
 		var joiny = newArray.join('-');
 
-		function capitalizeFirstLetter(){
+		/*function capitalizeFirstLetter(){
 			var cappy = joiny[0].toUpperCase() + joiny.slice(1);
 			console.log(cappy)
 
@@ -48,7 +56,7 @@ function accum(s){
 			
 		}
 
-		capitalizeFirstLetter(joiny)
+		capitalizeFirstLetter(joiny)*/
 
 
 	//Something which will transform each first letter to upper case
