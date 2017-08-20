@@ -8,42 +8,53 @@ function sumDigPow(a, b) {
 			//solving a
 				//a loop that will write out numbers from 'a' to 9
 				for (i = a; i <= 9; i++){
-					
+					var element = i;
+					//push these values in to new Array above
+					var pushy = newArray.push(i);
+					//console.log(newArray)
 				}
-
-				//push these values in to new Array above
 
 			//solving b
 
 				//a solution to convert a number to a string, split the stringed numbers into separate strings and convert each of them to numbers again, returing an array of numbers
 
+				var stringy = b.toString();
+				var splitString = stringy.split('');
+				var conv = splitString.map(function (elem){
+					var newArray = [];
+					var pushNum = newArray.push(Number(elem));
+					console.log(newArray);
+				});
+
+				//console.log(newArray)
+
 				//a solution to loop from 1 to the length of the array. Get the number in the stage each time the loop runs. Push the numbers into a new array.
 
 				//a solution to use the numbers in the previous loops as exponents of the elements in the splitted numbers
 
-			console.log("'a' is less than 10, and 'b' is not");
+			//console.log("'a' is less than 10, and 'b' is not");
 		}
 		else if (newA < 10 && newB < 10){
 			//a loop that will write out numbers from 'a' to 'b'
-			console.log("BOTH 'a' and 'b' is less than 10");
+			//console.log("BOTH 'a' and 'b' is less than 10");
 		}
 
 		else if(newA >= 10 && newB >= 10){
-			console.log("BOTH 'a' and 'b' is a 2 or more-digit integer");
+			//console.log("BOTH 'a' and 'b' is a 2 or more-digit integer");
 		}
 		else {
-			console.log('time to think and write a new branch')
+			//console.log('time to think and write a new branch')
 		}
 	}
 }
 
-sumDigPow(10, 10); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9]
-sumDigPow(1, 100); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9, 89]
-sumDigPow(10, 100); //[89]
-sumDigPow(90, 100); //[]
-sumDigPow(90, 150); //[135]
-sumDigPow(50, 150); //[89, 135]
-sumDigPow(10, 150); //[89, 135
+sumDigPow(1, 10); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9]
+//sumDigPow(1, 100); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9, 89]
+//sumDigPow(10, 100); //[89]
+//sumDigPow(90, 100); //[]
+//sumDigPow(90, 150); //[135]
+//sumDigPow(50, 150); //[89, 135]
+//sumDigPow(10, 150); //[89, 135
 
 /*
 What you need:
