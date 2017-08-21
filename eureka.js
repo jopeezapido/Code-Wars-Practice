@@ -2,36 +2,51 @@ function sumDigPow(a, b) {
 	newA = Math.floor(Math.min(a,b));
 	newB = Math.floor(Math.max(a,b));
 	var newArray = [];//an array to push values to. Values will depend on the returned values of the decision tree below
+	var bArray = [];
 
 	if (newA <= newB){
 		if (newA < 10 && newB >= 10){
+
 			//solving a
+
 				//a loop that will write out numbers from 'a' to 9
 				for (i = a; i <= 9; i++){
-					var element = i;
 					//push these values in to new Array above
 					var pushy = newArray.push(i);
-					//console.log(newArray)
 				}
+				
+				//console.log(newArray)
 
 			//solving b
 
+				//get all values from 10 to 'newB'
+
+				for (i = 10; i <= newB; i++){
+					var element = i;
+					var pushyB = bArray.push(element)
+					//console.log(b.length)
+				}
+
+				//console.log(bArray);
+
 				//a solution to convert a number to a string, split the stringed numbers into separate strings and convert each of them to numbers again, returing an array of numbers
 
-				var stringy = b.toString();
-				var splitString = stringy.split('');
-				var conv = splitString.map(function (elem){
-					var newArray = [];
-					var pushNum = newArray.push(Number(elem));
-					console.log(newArray);
+				var convString = bArray.map(function (elem){
+					var stringy = elem.toString();
+					var splitString = stringy.split('');
+					return splitString;
 				});
 
-				//console.log(newArray)
+				var splitElements = convString.map(function (elem){
+					for (i = 0; i <= elem.length; i++){
+						elem += elem[i];
+						return elem;
+					}
+				});
 
-				//a solution to loop from 1 to the length of the array. Get the number in the stage each time the loop runs. Push the numbers into a new array.
+				console.log(splitElements)
 
-				//a solution to use the numbers in the previous loops as exponents of the elements in the splitted numbers
-
+			
 			//console.log("'a' is less than 10, and 'b' is not");
 		}
 		else if (newA < 10 && newB < 10){
@@ -48,8 +63,8 @@ function sumDigPow(a, b) {
 	}
 }
 
-sumDigPow(1, 10); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9]
-//sumDigPow(1, 100); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9, 89]
+//sumDigPow(1, 10); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9]
+sumDigPow(1, 100); 	//[1, 2, 3, 4, 5, 6, 7, 8, 9, 89]
 //sumDigPow(10, 100); //[89]
 //sumDigPow(90, 100); //[]
 //sumDigPow(90, 150); //[135]
