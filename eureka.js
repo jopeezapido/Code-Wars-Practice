@@ -24,7 +24,6 @@ function sumDigPow(a, b) {
 				for (i = 10; i <= newB; i++){
 					var element = i;
 					var pushyB = bArray.push(element)
-					//console.log(b.length)
 				}
 
 				//console.log(bArray);
@@ -37,15 +36,25 @@ function sumDigPow(a, b) {
 					return splitString;
 				});
 
-				var splitElements = convString.map(function (elem){
-					for (i = 0; i <= elem.length; i++){
-						elem += elem[i];
+				console.log(convString)
+				
+				var convToNum = convString.map(function (elem){
+					
+				})
+
+				console.log(convToNum);
+
+				var elemCount = convString.map(function (elem){
+					/*for (i = 0; i <= elem.length; i++){
 						return elem;
-					}
+					}*/
+
+					
 				});
 
-				console.log(splitElements)
+				//console.log(elemCount)
 
+			
 			
 			//console.log("'a' is less than 10, and 'b' is not");
 		}
