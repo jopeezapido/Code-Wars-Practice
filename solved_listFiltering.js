@@ -1,8 +1,10 @@
 function filter_list(l) {
-    // Return a new array with the strings filtered out
-    
-    //console.log(arr);
+// Return a new array with the strings filtered out
 
+//Previous Solution
+
+    /*
+    
     var getType = l.map(function(elem) {
         var typo = typeof(elem);
         if(typo == "number") {
@@ -11,15 +13,21 @@ function filter_list(l) {
             return String;
         }
     });
-    //console.log(getType);
-
+    
     var getNum = getType.filter(function(elem) {
-        return elem != String;
+       return elem == "number"
     });
+
+    */
+
+
+//Refactored Solution
+    var getNum = l.filter(function(elem) {return typeof elem == "number";});
 
     return getNum;
 }
 
-filter_list([1,2,'a','b']) == [1,2]
-filter_list([1,'a','b',0,15]) == [1,0,15]
-filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+console.log(filter_list([1,2,'a','b']));
+console.log(filter_list([1,'a','b',0,15]));
+console.log(filter_list([1,2,'aasf','1','123',123]));
